@@ -93,7 +93,7 @@ export function useLocalExtensions(): {
   const [isLoading, setIsLoading] = useState(true);
   const [extensions, setExtensions] = useState<Extension[]>();
   const [error, setError] = useState<string>();
-  const [date, setDate] = useState(new Date());
+  const [_date, setDate] = useState(new Date());
 
   const refresh = () => {
     setDate(new Date());
