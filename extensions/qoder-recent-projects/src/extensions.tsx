@@ -1,5 +1,5 @@
 import { Action, ActionPanel, Color, List, showToast, Toast } from "@raycast/api";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type JSX } from "react";
 import { getErrorMessage } from "./utils";
 import type { Extension } from "./lib/qoder";
 import { getLocalExtensions } from "./lib/qoder";
@@ -42,7 +42,7 @@ function ExtensionListItem(props: { extension: Extension; reloadExtension: () =>
           <ActionPanel.Section>
             <Action.CopyToClipboard
               content={e.id}
-              title="Copy Extension Id"
+              title="Copy Extension ID"
               shortcut={{ modifiers: ["cmd", "shift"], key: "." }}
             />
             {e.publisherDisplayName && (
@@ -93,7 +93,7 @@ export function useLocalExtensions(): {
   const [isLoading, setIsLoading] = useState(true);
   const [extensions, setExtensions] = useState<Extension[]>();
   const [error, setError] = useState<string>();
-  const [_date, setDate] = useState(new Date());
+  const [, setDate] = useState(new Date());
 
   const refresh = () => {
     setDate(new Date());

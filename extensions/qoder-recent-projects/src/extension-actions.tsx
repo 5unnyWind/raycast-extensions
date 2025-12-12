@@ -1,6 +1,7 @@
 import { showToast, Toast, Action, Icon, Color, confirmAlert, Alert, showHUD } from "@raycast/api";
 import { getQoderCLI } from "./lib/qoder";
 import { getErrorMessage } from "./utils";
+import type { JSX } from "react";
 
 export function InstallExtensionByIDAction(props: { extensionID: string; afterInstall?: () => void }): JSX.Element {
   const handle = async () => {

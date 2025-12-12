@@ -1,6 +1,6 @@
 import { Action, ActionPanel, Color, Icon, List, showToast, Toast } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
-import { useState } from "react";
+import { useState, type JSX } from "react";
 import {
   InstallExtensionByIDAction,
   OpenExtensionByIDInBrowserAction,
@@ -160,7 +160,7 @@ function GalleryExtensionListItem(props: {
             <OpenExtensionByIDInBrowserAction extensionID={getFullExtensionID(e)} />
             <Action.CopyToClipboard
               content={getFullExtensionID(e)}
-              title="Copy Extension Id"
+              title="Copy Extension ID"
               shortcut={{ modifiers: ["cmd", "shift"], key: "." }}
             />
           </ActionPanel.Section>
